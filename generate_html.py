@@ -16,7 +16,7 @@ with open(blurb_file_path, 'r') as blurb:
 # Generate HTML
 table_rows = ''
 for row in rows:
-    table_rows += f'    <tr><td>{row["Product"]}</td><td>{row["App Needed"]}</td></tr>\n'
+    table_rows += f'    <tr><td>{row["Product"]}</td><td>{row["App Needed to Use"]}</td><td>{row["App Needed to Setup"]}</td></tr>\n'
 
 html_content = f'''
 <!DOCTYPE html>
@@ -34,7 +34,8 @@ html_content = f'''
         <thead>
             <tr>
                 <th>Product</th>
-                <th>App Needed</th>
+                <th>App Needed to Use</th>
+                <th>App Needed to Setup</th>
             </tr>
         </thead>
         <tbody>

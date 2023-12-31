@@ -1,5 +1,6 @@
-Product,App Needed
-Theragun Prime,No
-Apple Watch,Yes
-Storz and Bickel Mighty,No
-Apple TV, Yes
+Product,App Needed to Use,App Needed to Setup
+Theragun Prime,No,No
+Apple Watch,Yes,Yes
+Storz and Bickel Mighty,No,Yes
+Apple TV, Yes,Yes
+FitBit, Yes, Yes
