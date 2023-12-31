@@ -1,21 +1,25 @@
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background-color: #1e1e1e; /* Dark background color */
+    color: #fff; /* Light text color */
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    color: #fff; /* Light text color */
 }
 
 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #444; /* Dark border color */
     padding: 10px;
     text-align: left;
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: #333; /* Dark background color for header */
+    color: #fff; /* Light text color for header */
 }
 
