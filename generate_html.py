@@ -3,6 +3,7 @@ import csv
 csv_file_path = 'products.csv'
 html_file_path = 'index.html'
 blurb_file_path = 'blurb.html'
+searching_script_path = 'script.js'
 
 # Read CSV file
 with open(csv_file_path, 'r') as csv_file:
@@ -12,6 +13,9 @@ with open(csv_file_path, 'r') as csv_file:
 # Read Blurb
 with open(blurb_file_path, 'r') as blurb:
     blurb_text = "\n" + blurb.read() + "\n"
+
+with open(searching_script_path, 'r') as searcher:
+    searcher_script = "\n" + searcher.read() + "\n"
 
 # Generate HTML
 table_rows = ''
@@ -30,9 +34,10 @@ html_content = f'''
 <body>
     <h1>Is the App Necessary?</h1>
     {blurb_text}
-    <table id="productTable">
+    <input id='user_input' onkeyup='search_table()' type='text' placeholder="Enter item here">
+    <table id="product_table">
         <thead>
-            <tr>
+            <tr id="table_header">
                 <th>Product</th>
                 <th>App Needed to Use</th>
                 <th>App Needed to Setup</th>
@@ -43,6 +48,9 @@ html_content = f'''
         </tbody>
     </table>
 </body>
+<script>
+{searcher_script}
+</script>
 </html>
 '''
 

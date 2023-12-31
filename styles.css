@@ -23,3 +23,10 @@ th {
     color: #fff; /* Light text color for header */
 }
 
+#user_input {
+    padding: 10px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: #fff;
+    margin-top: 10px;
+}

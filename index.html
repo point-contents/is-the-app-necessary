@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AppCheck - Product Compatibility</title>
+    <title>Is the App Necessary?</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
@@ -15,9 +15,10 @@
 Want to know if the app is necessary to even start using the thing?</p>
 
 
-    <table id="productTable">
+    <input id='user_input' onkeyup='search_table()' type='text' placeholder="Enter item here">
+    <table id="product_table">
         <thead>
-            <tr>
+            <tr id="table_header">
                 <th>Product</th>
                 <th>App Needed to Use</th>
                 <th>App Needed to Setup</th>
@@ -33,4 +34,32 @@ Want to know if the app is necessary to even start using the thing?</p>
         </tbody>
     </table>
 </body>
+<script>
+
+function search_table() {
+    var input, filter, found, table, tr, td, i, j;
+    input = document.getElementById("user_input");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("product_table");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td");
+        for (j = 0; j < td.length; j++) {
+            if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1) {
+                found = true;
+            }
+        }
+        if (found) {
+            tr[i].style.display = "";
+            found = false;
+        } else {
+			if (tr[i].id != 'table_header') {
+				tr[i].style.display = "none";
+			}
+        }
+    }
+}
+
+
+</script>
 </html>
