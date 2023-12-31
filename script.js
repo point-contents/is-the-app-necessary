@@ -1,3 +1,4 @@
+// stolen from https://stackoverflow.com/questions/9127498/how-to-perform-a-real-time-search-and-filter-on-a-html-table
 function search_table() {
     var input, filter, found, table, tr, td, i, j;
     input = document.getElementById("user_input");
@@ -21,3 +22,5 @@ function search_table() {
         }
     }
 }
+
+
