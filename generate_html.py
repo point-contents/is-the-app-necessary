@@ -54,7 +54,6 @@ html_content = f'''
 <script>
 {searcher_script}
 </script>
-</html>
 '''
 
 # Write HTML file
