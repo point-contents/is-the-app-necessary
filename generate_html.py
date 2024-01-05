@@ -47,7 +47,9 @@ html_content = f'''
 {table_rows}
         </tbody>
     </table>
-    <a href="https://github.com/point-contents/is-the-app-necessary" target="_blank">Visit GitHub Repository</a>
+    <ul>
+    <li><a href="https://github.com/point-contents/is-the-app-necessary" target="_blank">Visit GitHub Repository</a></li>
+    </ul>
 </body>
 <script>
 {searcher_script}
