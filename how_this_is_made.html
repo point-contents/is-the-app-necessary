@@ -1,0 +1,36 @@
+<html>
+<body>
+	<h3>The Makefile shows what is happening</h3>
+	<p>
+		The top of the page contains a blurb, this is created using pandoc to convert blurb.md to html
+	</p>
+	<p>
+		At the bottom of the page there is an index. 
+	</p>
+	<p>
+		This is created with a tree and sed command that creates a tree of the directory and saves this as a html section
+	</p>
+	<br>
+	<p>
+		The python script generate_html creates an html table from products.csv
+	</p>
+	<p>
+		generate_html also contains placeholder html which gives the page its structure.
+	</p>
+	<p>
+		generate_html then uses all of the previously mentioned htmls and stiches them together to make the page that is index.html
+	</p>
+	<br>
+
+	<b>This is all done using the make command.</b>
+	<hr>
+	<p>
+		Netlify is watching for pushes to the main branch of the respository.
+	</p>
+	<p>
+		If there is a push, Netlify will run the make command publish the directory, serving index.html statically.
+	</p>
+	<br>
+</body>
+</html>
+
