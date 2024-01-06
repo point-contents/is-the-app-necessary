@@ -4,18 +4,21 @@ csv_file_path = 'products.csv'
 html_file_path = 'index.html'
 blurb_file_path = 'blurb.html'
 searching_script_path = 'script.js'
+directory_listing = 'page_index.html'
 
 # Read CSV file
 with open(csv_file_path, 'r') as csv_file:
     csv_reader = csv.DictReader(csv_file)
     rows = list(csv_reader)
 
-# Read Blurb
 with open(blurb_file_path, 'r') as blurb:
     blurb_text = "\n" + blurb.read() + "\n"
 
 with open(searching_script_path, 'r') as searcher:
     searcher_script = "\n" + searcher.read() + "\n"
+
+with open(directory_listing, 'r') as listing:
+    directory_list = listing.read()
 
 # Generate HTML
 table_rows = ''
@@ -50,6 +53,8 @@ html_content = f'''
     <ul>
     <li><a href="https://github.com/point-contents/is-the-app-necessary" target="_blank">Visit GitHub Repository</a></li>
     </ul>
+    <br><br>
+{directory_list}
 </body>
 <script>
 {searcher_script}
