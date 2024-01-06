@@ -51,7 +51,7 @@ html_content = f'''
         </tbody>
     </table>
     <ul>
-    <li><a href="https://github.com/point-contents/is-the-app-necessary" target="_blank">Visit GitHub Repository</a></li>
+    <li><a href="https://github.com/point-contents/is-the-app-necessary" target="_blank">Visit Git Repository</a></li>
     </ul>
     <br><br>
 {directory_list}
