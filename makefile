@@ -7,7 +7,10 @@ blurb: blurb.md
 page_index: 
 	tree -H .  | sed -n "/<body>/,/<\/body>/p" | sed "1d" | sed  "/<\/body>/d" | sed "s/h1/h3/" > page_index.html
 
-generate_html: products.csv blurb styles.css script.js page_index
+docs:
+	pandoc -f markdown -t html readme.md -o man.html --css man.css --standalone
+
+generate_html: products.csv blurb styles.css script.js page_index docs
 	python3 generate_html.py
 
 # taken from here https://stackoverflow.com/questions/54844405/test-if-python3-is-installed-in-a-makefile
