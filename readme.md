@@ -58,8 +58,10 @@
     </style>
 </head>
 <body>
-    <h1>Makefile Man Page</h1>
-
+    <h1>Man Page</h1>
+    <a href="https://app.netlify.com/sites/dancing-pavlova-67c9fa/deploys">
+      <img src="https://api.netlify.com/api/v1/badges/43469286-e452-4d40-96e6-735391cf1e33/deploy-status" alt="Netlify Status">
+    </a>
     <h2>DESCRIPTION</h2>
     <p>
         The Makefile shows what is happening. The top of the page contains a blurb, created using pandoc to convert <code>blurb.md</code> to HTML. At the bottom of the page, there is an index created with a tree and sed command that generates a tree of the directory and saves this as an HTML section.

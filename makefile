@@ -12,7 +12,7 @@ generate_html: products.csv blurb styles.css script.js page_index
 
 # taken from here https://stackoverflow.com/questions/54844405/test-if-python3-is-installed-in-a-makefile
 # not working how I expect it to though yet
-publish:
+serve:
 	PYTHON3 := $(shell type -P python4)
 	ifeq ('$(PYTHON3)','')
 		@python3 -m http.server 8080
